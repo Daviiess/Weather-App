@@ -42,9 +42,24 @@ searchBtn.addEventListener('click' , ()=>{
     const city = inputCity.value;
     if(city){
         checkWeather(city)
+        localStorage.setItem('lastCity', city);
     }else{
         alert('Please Enter a city name');
     }
         inputCity.value = '';
 })
 
+inputCity.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") searchBtn.click();
+});
+
+window.addEventListener('load', () => {
+  const lastCity = localStorage.getItem('lastCity');
+  if (lastCity) {
+    inputCity.value = lastCity;
+    checkWeather(lastCity);
+  }
+});
+inputCity.addEventListener('input', () => {
+  localStorage.setItem('lastCity', inputCity.value);
+});
