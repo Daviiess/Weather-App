@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #7691A0; 
+    --bg-color2: #B6D4E1; /* Light Gray */
+    --text-color: #ffffff; /* Dark Gray */
+     --bg-color: #3F9AC9; /* Blue */
+     --input-color: #6B8697;
+}
+html{
+    font-size: 55%;
+}
+body{
+background: linear-gradient(to bottom, var(--bg-color), var(--bg-color2));
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Arial', sans-serif;
+color: var(--text-color);
+padding: 10% 10rem;
+}
+.card{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 4rem 4rem;
+    background: var(--primary-color);
+    border-radius: 2.5rem;
+    box-shadow: 0 0 20px var(--bg-color2);
+    transition: all 0.4s ease-in-out;
+    
+}
+.card:hover{
+transform: translateY(-3px);
+box-shadow: 0 0 25px var(--bg-color2),
+            0 0 25px var(--bg-color2),
+            0 0 25px var(--bg-color2);
+}
+.card-header {
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+.card-header input{
+    padding: 2.5rem 5rem;
+    border-radius: 5rem;
+   background-color: var(--input-color);
+   border-top-right-radius: 0;
+   border-bottom-right-radius: 0;
+border: none;
+outline: none;
+cursor: pointer;
+color: white;
+font-size: 1.6rem;
+}
+
+.card-header input::placeholder{
+    color: #B6D4E1;
+}
+.card-header input:focus{
+    background-color: var(--input-color);
+}
+.card-header input:active{
+    background-color: var(--input-color);
+}
+.card-header input:visited{
+    background-color: var(--input-color);
+}
+.card-header .search-btn{
+    width: 100%;
+    padding: 1.5rem 3.5rem;
+    border-left: none;
+    background: var(--input-color);
+    border: none;
+    outline: none;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    
+}
+.card-header i{
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.card-location{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+.card-location p{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.card-image{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+    padding: 0;
+}
+.card-image img{
+    width: 20rem;
+    height: 20rem;
+    padding: 0;
+    margin-left: -25px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.card-image img:hover{
+    transform: scale(1.1);
+}
+.card-image h3{
+    font-size: 8rem;
+}
+.card-image p{
+    font-size: 4rem;
+}
+.weather-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.weather-details p{
+    font-size: 2.5rem;
+    font-weight: 500;       
+}
+.weather-details span{
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 1rem;
+}
+@media (max-width: 500px) {
+  .card {
+    width: 95%;
+    padding: 2rem;
+  }
+
+  .card-header input {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .card-image h3 {
+    font-size: 5rem;
+  }
+
+  .card-image p {
+    font-size: 2.5rem;
+  }
+
+  .weather-details p,
+  .weather-details span {
+    font-size: 2rem;
+  }
+}
