@@ -22,7 +22,7 @@ async function checkWeather(city){
         document.querySelector('.date').innerHTML = readAbleDate;
         document.querySelector('.weather-temp').innerHTML = Math.round(data.main.temp) + "°C";
         document.querySelector('.weather-condition').innerHTML = data.weather[0].main;
-        document.querySelector('#humidity-value').innerHTML = data.main.humidity;
+        document.querySelector('#humidity-value').innerHTML = data.main.humidity + '%';
         document.querySelector('#weather-wind-speed').innerHTML = data.wind.speed + " km/h";
         document.querySelector('.weather-img').src = `images/${weather}.png`;
     

@@ -15,14 +15,13 @@ html{
 }
 body{
 background: linear-gradient(to bottom, var(--bg-color), var(--bg-color2));
-width: 100vw;
 height: 100vh;
 display: flex;
 justify-content: center;
 align-items: center;
 font-family: 'Arial', sans-serif;
 color: var(--text-color);
-padding: 10% 10rem;
+padding: 5%;
 }
 .card{
     width: 450px;
@@ -36,6 +35,7 @@ padding: 10% 10rem;
     border-radius: 2.5rem;
     box-shadow: 0 0 20px var(--bg-color2);
     transition: all 0.4s ease-in-out;
+    
     
 }
 .card:hover{
@@ -60,6 +60,13 @@ outline: none;
 cursor: pointer;
 color: white;
 font-size: 1.6rem;
+flex: 1;
+
+
+}
+.card-header .search-btn:hover {
+    background-color: #5b7685;
+    cursor: pointer;
 }
 
 .card-header input::placeholder{
@@ -75,7 +82,6 @@ font-size: 1.6rem;
     background-color: var(--input-color);
 }
 .card-header .search-btn{
-    width: 100%;
     padding: 1.5rem 3.5rem;
     border-left: none;
     background: var(--input-color);
@@ -95,7 +101,7 @@ font-size: 1.6rem;
     justify-content: space-between;
     align-items: center;
 
-    width: 100%;
+width: 100%;
 }
 .card-location p{
     font-size: 2.5rem;
@@ -145,7 +151,7 @@ font-size: 1.6rem;
 }
 @media (max-width: 500px) {
   .card {
-    width: 95%;
+    width: 100%;
     padding: 2rem;
   }
 
